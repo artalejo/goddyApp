@@ -56,9 +56,9 @@ public class GoodsPresenterImpl extends AbstractPresenter implements GoodsPresen
 
     @Override
     public void addGoodToBasket(Good good) {
-        AddGoodToBasketUserCase addFavoriteTweetUserCase =
+        AddGoodToBasketUserCase addGoodToBasketUserCase =
                 new AddGoodToBasketUserCaseImpl(mExecutor, mMainThread, goodsRepository, good, this);
-        addFavoriteTweetUserCase.execute();
+        addGoodToBasketUserCase.execute();
     }
 
     @Override

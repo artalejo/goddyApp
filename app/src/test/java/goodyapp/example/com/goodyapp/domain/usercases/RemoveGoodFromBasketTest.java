@@ -34,7 +34,7 @@ public class RemoveGoodFromBasketTest {
     }
 
     @Test
-    public void notRemovingFavoriteTweetWhenTweetIsNullTest() throws Exception {
+    public void notRemovingGoodWhenGoodIsNullTest() throws Exception {
         RemoveGoodFromBasketUserCaseImpl userCase =
                 new RemoveGoodFromBasketUserCaseImpl(mExecutor, mMainThread, mockedGoodsRepo,
                                                     null, mockedCallback);
@@ -45,7 +45,7 @@ public class RemoveGoodFromBasketTest {
     }
 
     @Test
-    public void removingFavoriteTweetWhenTweetNotNullTest() throws Exception {
+    public void removingGoodWhenGoodNotNullTest() throws Exception {
         RemoveGoodFromBasketUserCaseImpl userCase =
                 new RemoveGoodFromBasketUserCaseImpl(mExecutor, mMainThread, mockedGoodsRepo,
                                                      mockedGood, mockedCallback);

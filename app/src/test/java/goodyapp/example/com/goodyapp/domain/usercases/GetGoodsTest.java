@@ -37,7 +37,7 @@ public class GetGoodsTest {
     }
 
     @Test
-    public void getFavoritesTweetsTest() throws Exception {
+    public void getGoodsTest() throws Exception {
         GetGoodsUserCaseImpl userCase =
                 new GetGoodsUserCaseImpl(mExecutor, mMainThread, mockedGoodRepo,
                         currencySelected ,mockedCallback);

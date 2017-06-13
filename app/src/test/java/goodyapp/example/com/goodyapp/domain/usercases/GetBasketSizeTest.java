@@ -36,7 +36,7 @@ public class GetBasketSizeTest {
     }
 
     @Test
-    public void getFavoritesTweetsTest() throws Exception {
+    public void getBasketSizeTest() throws Exception {
         GetBasketSizeUserCaseImpl userCase =
                 new GetBasketSizeUserCaseImpl(mExecutor, mMainThread, mockedGoodRepo,
                                               currencySelected ,mockedCallback);

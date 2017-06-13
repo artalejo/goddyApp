@@ -37,7 +37,7 @@ public class GetBasketGoodsTest {
     }
 
     @Test
-    public void getFavoritesTweetsTest() throws Exception {
+    public void getBasketGoodsEmptyListTest() throws Exception {
         GetBasketGoodsUserCaseImpl userCase =
                 new GetBasketGoodsUserCaseImpl(mExecutor, mMainThread, mockedGoodRepo,
                         currencySelected ,mockedCallback);
