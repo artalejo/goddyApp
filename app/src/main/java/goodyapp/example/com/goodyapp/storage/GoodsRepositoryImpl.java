@@ -42,9 +42,4 @@ public class GoodsRepositoryImpl implements GoodsRepository {
     public void insertCurrencies(HashMap<String, Double> currencies) {
         db.insertCurrencies(currencies);
     }
-
-    @Override
-    public double getCurrencyValue(String currencyName) {
-        return db.getCurrencyValue(currencyName);
-    }
 }

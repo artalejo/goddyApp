@@ -16,22 +16,8 @@ public class LatestCurrencies {
         this.base = base;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
     public HashMap<String, Double> getRates() {
-        return rates;
-    }
-
-    public double getRate(String currencyCode) {
-        if (rates.containsKey(currencyCode))
-            return rates.get(currencyCode);
-        return -1;
+        return this.rates;
     }
 
 }

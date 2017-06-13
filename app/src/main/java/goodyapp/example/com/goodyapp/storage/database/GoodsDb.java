@@ -260,9 +260,4 @@ public class GoodsDb extends SQLiteOpenHelper {
 
         return currencyValue;
     }
-
-    public double getCurrencyValue(String currencyName) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        return getCurrencyValue(db, currencyName);
-    }
 }

@@ -11,4 +11,6 @@
     <string name="checkout_dialog_title">Do you want to continue with the checkout ?</string>
     <string name="checkout_buy">Buy</string>
     <string name="checkout_completed">You have bought all your groceries</string>
+    <string name="select_currency_dialog_title">Select Currency:</string>
+    <string name="cancel">Cancel</string>
 </resources>

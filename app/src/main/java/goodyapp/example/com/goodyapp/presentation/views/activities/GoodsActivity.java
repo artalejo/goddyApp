@@ -96,7 +96,8 @@ public class GoodsActivity extends AppCompatActivity implements GoodsPresenter.V
         final View basketMenu = menu.findItem(R.id.basket_item).getActionView();
         basketMenuCounter = (TextView) basketMenu.findViewById(R.id.basket_counter);
         updateBasketCount(basketItems);
-        new BasketMenuItemStuffListener(basketMenu, "Show hot message") {
+
+        new BasketMenuItemStuffListener(basketMenu) {
             @Override
             public void onClick(View v) {
                 startBasketActivity();
@@ -152,7 +153,7 @@ public class GoodsActivity extends AppCompatActivity implements GoodsPresenter.V
 
     private void showCurrencyDialog() {
         AlertDialog.Builder builderSingle = new AlertDialog.Builder(this);
-        builderSingle.setTitle("Select Currency:");
+        builderSingle.setTitle(R.string.select_currency_dialog_title);
 
         final ArrayAdapter<Rates> arrayAdapter =
                 new ArrayAdapter<>(this, R.layout.currency_row, Rates.values());
@@ -166,7 +167,7 @@ public class GoodsActivity extends AppCompatActivity implements GoodsPresenter.V
                 dialog.dismiss();
             }
         });
-        builderSingle.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builderSingle.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();

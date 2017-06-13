@@ -12,6 +12,5 @@ public interface GoodsRepository {
     List<Good> getGoods(String currency);
     List<Good> getBasketGoods(String currency);
     void insertCurrencies(HashMap<String, Double> currencies);
-    double getCurrencyValue(String currencyName);
 
 }
