@@ -79,16 +79,14 @@ public class GoodsActivity extends AppCompatActivity implements GoodsPresenter.V
                 ThreadExecutor.getInstance(),
                 MainThreadImpl.getInstance(),
                 this, new GoodsRepositoryImpl(this), currencySelected);
-
-        // Getting the basket size to initialize the counter of items in the basket
-        // We just call it at the beginning to initialize the static counter with the correct value.
-        goodsPresenter.getBasketSize();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         goodsPresenter.showGoods();
+        // Getting the basket size to initialize the counter of items in the basket
+        goodsPresenter.getBasketSize();
         goodsProgressBar.setVisibility(View.VISIBLE);
     }
 
