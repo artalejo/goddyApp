@@ -16,19 +16,6 @@ public class CurrencyClient {
     private static Retrofit retrofit;
     private static CurrenciesInterface currencyApiService;
 
-    static {
-
-        OkHttpClient client = new OkHttpClient.Builder()
-                .addNetworkInterceptor(new StethoInterceptor())
-                .build();
-
-        retrofit = new Retrofit.Builder()
-                .baseUrl(REST_API_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .client(client)
-                .build();
-    }
-
     public static CurrenciesInterface getCurrencyApiClient() {
 
         if (currencyApiService == null) {

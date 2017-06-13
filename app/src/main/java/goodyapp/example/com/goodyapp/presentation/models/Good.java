@@ -96,23 +96,11 @@ public class Good {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public String getPriceDescription() {
         return priceDescription;
     }
 
-    public void setPriceDescription(String priceDescription) {
-        this.priceDescription = priceDescription;
-    }
-
     public String getResourceName() {
         return resourceName;
-    }
-
-    public void setResourceName(String resourceName) {
-        this.resourceName = resourceName;
     }
 }

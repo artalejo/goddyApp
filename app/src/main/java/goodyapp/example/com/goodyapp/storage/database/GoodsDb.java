@@ -39,7 +39,6 @@ public class GoodsDb extends SQLiteOpenHelper {
     private static final String CURRENCY_VALUE = "value";
 
     private static GoodsDb dbInstance = null;
-    private List<Good> mBasketGoods;
 
     public static synchronized GoodsDb getInstance(Context context) {
         if (dbInstance == null) {
