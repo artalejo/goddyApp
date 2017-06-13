@@ -155,7 +155,7 @@ public class GoodsActivity extends AppCompatActivity implements GoodsPresenter.V
         builderSingle.setTitle("Select Currency:");
 
         final ArrayAdapter<Rates> arrayAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, Rates.values());
+                new ArrayAdapter<>(this, R.layout.currency_row, Rates.values());
 
 
         builderSingle.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
