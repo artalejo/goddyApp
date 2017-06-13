@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GoodyApp</string>
+    <string name="goods_activity_toolbar_title">Buy goods</string>
+    <string name="good_added_to_basket_msg">Added to basket</string>
+    <string name="good_removed_from_basket_msg">Removed from basket</string>
+    <string name="ckeckout_btn">Checkout</string>
+    <string name="basket_activity_toolbar_title">Basket</string>
+    <string name="currency_menu_title">Currency</string>
+    <string name="basket_menu_title">Basket</string>
+    <string name="error_retrieving_currencies_msg">Error retrieving currencies</string>
+    <string name="checkout_dialog_title">Do you want to continue with the checkout ?</string>
+    <string name="checkout_buy">Buy</string>
+    <string name="checkout_completed">You have bought all your groceries</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="goodyapp.example.com.goodyapp.presentation.views.activities.GoodsActivity">
+
+    <item
+        android:id="@+id/currency_item"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_currency"
+        android:title="@string/currency_menu_title"/>
+
+    <item
+        android:id="@+id/basket_item"
+        app:actionLayout="@layout/action_bar_notification_icon"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_shopping_cart"
+        android:title="@string/basket_menu_title"/>
+
+</menu>
