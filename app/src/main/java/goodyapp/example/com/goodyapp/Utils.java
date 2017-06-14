@@ -49,7 +49,7 @@ public class Utils {
         Map<String, String> currencyCodes =
                 ((AndroidApplication) activity.getApplication()).getCurrencyCodes();
 
-        if (currencyCodes.containsKey(currencyName))
+        if (currencyCodes != null && currencyCodes.containsKey(currencyName))
             return currencyCodes.get(currencyName);
         return "€";
     }
