@@ -31,7 +31,9 @@ public class UtilsTest {
         MockitoAnnotations.initMocks(this);
         currencyCodes = new HashMap<>();
         currencyCodes.put("GBP", "£");
-        good = new Good(1, "test", 22.22, "testing", "resource", 2, "GBP");
+
+        good = new Good.Builder().id(1).name("test").price(22.22).priceDescription("testing").
+                resourceName("resource").quantity(2).currency("GBP").build();
 
         Mockito.when(mockedActivity.getApplication()).thenReturn(mockedAndroidApp);
         Mockito.when(mockedAndroidApp.getCurrencyCodes()).thenReturn(currencyCodes);

@@ -77,10 +77,10 @@ public class GoodsDb extends SQLiteOpenHelper {
         db.execSQL(CREATE_CURRENCY_VALUES_TABLE);
 
         // Inserting the hardcoded goods when creating the db.
-        this.insertGood(db, new Good(0, "Beans", 0.73, "per can", "beans"));
-        this.insertGood(db, new Good(1, "Eggs", 2.1, "per dozen", "eggs"));
-        this.insertGood(db, new Good(2, "Milk", 1.4, "per bottle", "milk"));
-        this.insertGood(db, new Good(3, "Peas", 0.95, "per bag", "peas"));
+        this.insertGood(db, new Good.Builder().id(0).name("Beans").price(0.73).priceDescription("per can").resourceName("beans").build());
+        this.insertGood(db, new Good.Builder().id(1).name("Eggs").price(2.1).priceDescription("per dozen").resourceName("eggs").build());
+        this.insertGood(db, new Good.Builder().id(2).name("Milk").price(1.4).priceDescription("per bottle").resourceName("milk").build());
+        this.insertGood(db, new Good.Builder().id(3).name("Peas").price(0.95).priceDescription("per bag").resourceName("peas").build());
     }
 
     @Override
@@ -187,8 +187,8 @@ public class GoodsDb extends SQLiteOpenHelper {
                 double goodPrice = cursor.getDouble(2) * currencyValueAgainstEuro;
                 String priceDescription = cursor.getString(3);
                 String resourceName = cursor.getString(4);
-                goods.add(new Good(goodID, goodName, goodPrice,
-                            priceDescription, resourceName, noQuantity, currencySelected));
+                goods.add(new Good.Builder().id(goodID).name(goodName).price(goodPrice).priceDescription(priceDescription).
+                        resourceName(resourceName).quantity(noQuantity).currency(currencySelected).build());
             }
         } finally {
             cursor.close();
@@ -220,8 +220,8 @@ public class GoodsDb extends SQLiteOpenHelper {
                 String priceDescription = cursor.getString(3);
                 String resourceName = cursor.getString(4);
                 int goodQuantity = cursor.getInt(5);
-                basketGoods.add(new Good(goodID, goodName, goodPrice, priceDescription,
-                                         resourceName, goodQuantity, currencySelected));
+                basketGoods.add(new Good.Builder().id(goodID).name(goodName).price(goodPrice).priceDescription(priceDescription).
+                        resourceName(resourceName).quantity(goodQuantity).currency(currencySelected).build());
             }
         } finally {
             cursor.close();
